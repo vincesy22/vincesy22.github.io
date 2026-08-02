@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: rgba(79, 209, 197, 0.35);
+  color: inherit;
+}
+
+/* Visible keyboard focus ring, consistent across the site */
+:focus-visible {
+  outline: 2px solid #4fd1c5;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #374357;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4fd1c5;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #dfe5e3;
+}
+
+/* Reveal-on-scroll base state, toggled via IntersectionObserver in useScrollReveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Signature "//" eyebrow label used across every section */
+.eyebrow::before {
+  content: '// ';
+  color: #4fd1c5;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
