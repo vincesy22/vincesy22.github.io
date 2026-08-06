@@ -91,6 +91,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/vincesy22/Spotify-Listening-Habits',
     demoUrl: undefined,
     featured: false,
-    image: 'https://drive.google.com/uc?export=view&id=1bD764maVKXaY94rcBoyUcSCjeabjlDO3',
+    image: 'https://lh3.googleusercontent.com/d/1bD764maVKXaY94rcBoyUcSCjeabjlDO3',
   }
 ]
