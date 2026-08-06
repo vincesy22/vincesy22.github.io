@@ -71,4 +71,26 @@ export const projects: Project[] = [
     featured: false,
     image: 'https://lh3.googleusercontent.com/d/1IhZWRt6MqR_eQkKlN6joFK933QabhAYS',
   },
+  {
+    slug: 'spotify-listening-habits',
+    title: 'Spotify Listening Habits',
+    tagline: 'An analysis of personal music preferences and listening patterns.',
+    description:
+      'A data analysis project exploring individual listening habits on Spotify, including favorite genres, artists, and time-of-day preferences.',
+    technologies: ['Python', 'Pandas', 'Matplotlib', 'Spotify API', 'Power BI'],
+    features: [
+      'Data collection from Spotify API',
+      'Analysis of listening patterns and trends',
+      'Visualization of favorite genres and artists',
+      'Insights into time-of-day listening preferences',
+    ],
+    challenges:
+      'Designing robust data analysis pipelines that could handle the variations and edge cases of real user data, and creating meaningful visualizations to communicate insights effectively.',
+    learned:
+      'Real-world experience with data analysis tools (Python, Pandas, Matplotlib), API integration, and translating business questions into actionable data insights.',
+    githubUrl: 'https://github.com/vincesy22/Spotify-Listening-Habits',
+    demoUrl: undefined,
+    featured: false,
+    image: 'https://drive.google.com/uc?export=view&id=1bD764maVKXaY94rcBoyUcSCjeabjlDO3',
+  }
 ]
